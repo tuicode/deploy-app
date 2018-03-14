@@ -8,9 +8,12 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards."
   },
-  "postinstall": "ng build --aot -prod",
+ 
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
